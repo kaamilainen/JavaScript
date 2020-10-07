@@ -1,23 +1,180 @@
 //console.log(1);
 "use strict";//modern mode, not old, new version of coding
+/*LESSON 22*/
+
+// let a = 5,
+//     b = a;
+// b = b + 5;
+// console.log(b, a);
+
+
+// const obj = {
+//     a: 5,
+//     b: 1
+// };
+// const copy = obj;// links to object - transffering via link
+// copy.a = 10;
+// console.log(copy, obj);
+
+
+
+// function copy(mainObj) {
+//     let objCopy = {};
+
+//     let key;
+//     for (key in mainObj) {
+//         objCopy[key] = mainObj[key];
+//     }
+//     return objCopy;
+// }
+
+// const numbers = {
+//     a: 2,
+//     b: 5,
+//     c: {
+//         x: 7,
+//         y: 4
+//     }
+// };
+
+// const newNumbers = copy(numbers);
+// newNumbers.a = 10;
+// newNumbers.c.x = 10;
+// console.log(newNumbers);
+// console.log(numbers);
+
+
+
+
+// const numbers = {
+//         a: 2,
+//         b: 5,
+//         c: {
+//             x: 7,
+//             y: 4
+//         }
+//     };
+// const add = {
+//     d: 17,
+//     e: 20
+// };
+// // console.log(Object.assign(numbers, add));
+// // console.log(Object.assign({}, add));
+
+// const clone = Object.assign({}, add);
+// clone.d = 20;
+// console.log(add);
+// console.log(clone);
+
+
+
+// const oldArray = ['a', 'b', 'c'];
+// const newArray = oldArray.slice();// slice just copy data from other array
+
+// newArray[1] = 'dsd';
+// console.log(newArray,oldArray);
+
+
+
+// const   video = ['youtube', 'vimeo', 'rutube'],
+//         blogs = ['wordpress', 'livejournal', 'blogger'],
+//         internet = [...video, ...blogs, 'vk', 'facebook'];
+
+// console.log(internet);
+
+
+
+// function log(a, b, c) {
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
+// const num = [2, 5, 7];
+// log(...num);
+
+
+
+// const array = ['a', 'b'];
+// const newAarray = [...array];
+// const q = {
+//     one: 1,
+//     two: 2,
+// };
+// const newObj = {...q};
+
+
+
+
+
+
+
+
+
+
+
+
+/*LESSON 21*/
+
+// const arr = [1, 9, 3, 34, 8];
+// arr.sort(compareNum);
+// console.log(arr);
+
+// function compareNum(a, b){
+//     return a-b;
+// }
+
+
+
+// arr[99] = 0;
+// console.log(arr.length);
+// console.log(arr);
+
+
+
+// arr.forEach(function(item, i, arr) {
+//     console.log(`${i}:${item} inside of array ${arr}`);
+// });
+
+
+
+// arr.pop(); //убирает последнее значение из массива
+// arr.push(10); //добавляет данные в конец массива
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
+
+// for (let value of arr) {
+//     console.log(value);
+// }
+
+const str = prompt('', '');
+const products = str.split(', ');
+products.sort();
+console.log(products.join('; '));
+
 /*LESSON 20*/
 
-const options = {
-    name: 'test',
-    width: 1024,
-    height: 1024,
-    colors: {
-        border: 'black',
-        bg: 'red'
-    },
-    makeTest: function() {
-        console.log('Test');
-    }
-};
-options.makeTest();
+// const options = {
+//     name: 'test',
+//     width: 1024,
+//     height: 1024,
+//     colors: {
+//         border: 'black',
+//         bg: 'red'
+//     },
+//     makeTest: function() {
+//         console.log('Test');
+//     }
+// };
+// //options.makeTest();
 
-console.log(Object.keys(options));//получаем массив со всеми ключами
-console.log(Object.keys(options).length);
+// const {border, bg} = options.colors;
+// console.log(border);
+
+
+// console.log(Object.keys(options));//получаем массив со всеми ключами
+// console.log(Object.keys(options).length);
 
 // console.log(options.name);
 // delete options.name;
