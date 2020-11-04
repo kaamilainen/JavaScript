@@ -1,8 +1,55 @@
 //console.log(1);
 "use strict";//modern mode, not old, new version of coding
+/*LESSON 23*/
+
+
+let str = 'some';
+let strObj = new String(str);
+
+
+console.log(typeof(str));
+console.log(typeof(strObj));
+console.log(strObj);
+
+const soldier = {
+    health: 400,
+    armor: 100,
+    sayHello: function(){
+        console.log("Hello");
+    }
+};
+
+
+//устраевший формат
+const jonh = {
+    health: 100
+};
+        //новый формат
+        const john = Object.create(soldier);
+
+
+jonh.__proto__ = soldier;//устаревший формат
+
+Object.setPrototypeOf(jonh, soldier);// новый формат
+
+
+
+console.log(john.armor);
+john.sayHello();
+
+
+
+
+
+
+
+
+
+
+
 /*LESSON 22*/
 
-// let a = 5,
+// let a = 5, 
 //     b = a;
 // b = b + 5;
 // console.log(b, a);
