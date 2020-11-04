@@ -1,5 +1,95 @@
 "use strict";
-// //TASK 4
+// TASK 4
+
+
+const personalMovieDB =  {
+    count: 0,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false,
+
+    start: function() {
+        personalMovieDB.count = +prompt('How many films you have seen?', '');
+    
+        while (personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count)) {
+            personalMovieDB.count = +prompt('How many films you have seen?', '');
+        }
+    },
+    rememberMyFilms: function () {
+        for (let i = 0; i < 2; i++) {
+            const a = prompt('What is the last one?', ''),
+                  b = prompt('How would you rate it?', '');
+                  
+                  if (a != null && b != null && a != '' && b != '' && a.length < 50){
+                        personalMovieDB.movies[a] = b;
+                        console.log('done');
+                    } else {
+                        console.log('error');
+                        i--;
+                    }   
+        }
+    },
+    detectPersonalLevel: function(){
+        if (personalMovieDB.count <= 10) {
+            prompt("You have watched a few films");
+        } else if (personalMovieDB.count > 10 && personalMovieDB.count < 30) {
+            prompt("You doing well");
+        } else if (personalMovieDB.count >= 30) {
+            prompt('You are a cinemamen!');
+        } else {
+            console.log('error');
+        }
+    },
+    showMyDB: function(hidden) {
+        if (!hidden){
+            console.log(personalMovieDB);
+        }
+    },
+
+
+
+    toggleVisibleMyDB: function(){
+        if (personalMovieDB.privat == false) {
+            personalMovieDB.privat = true;
+        }else{
+            personalMovieDB.privat = false;
+        }
+    },
+    // Teacher did:
+    // toggleVisibleMyDB: function(){
+    //     if (personalMovieDB.privat) {
+    //         personalMovieDB.privat = false;
+    //     }else{
+    //         personalMovieDB.privat = true;
+    //     }
+    // },
+
+
+
+    writeYourGenres: function() {
+        for (let i = 1; i <= 3; i++){
+            let genre = prompt(`What is your favourite genres number ${i}?`);
+            if (genre === '' || genre == null ){
+                console.log('You typed incorrect data');
+                i--;
+            }else{
+                personalMovieDB.genres[i - 1] = genre;
+            }
+        }
+        personalMovieDB.genres.forEach((item, i) => {
+            console.log(`Your favourite genre ${i+1} is ${item}`);
+        });
+    }
+};
+
+
+console.log(personalMovieDB);
+
+
+
+
+
 
 
 

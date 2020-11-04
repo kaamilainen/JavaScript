@@ -1,5 +1,70 @@
 //console.log(1);
 "use strict";//modern mode, not old, new version of coding
+/*LESSON 26*/
+ //to sting
+//method 1
+console.log(typeof(String(null)));
+console.log(typeof(String(4)));
+
+
+//method 2
+console.log(typeof(5 + ''));
+
+
+const num = 5;
+console.log("https://vk.com/catalog/" + num);
+
+
+
+const fontSize = 26 + 'px';
+console.log();
+
+
+
+ //to number
+//method 1
+ console.log(typeof(Number('4')));
+
+//method 2
+console-length(typeof(+'5'));
+
+//method 3
+console.log(typeof(parseInt("15px", 10)));
+
+
+let answ = +prompt("Hello", "");
+
+
+// to boolean
+
+//0, '', null, undefined, NaN;
+
+//method 1
+let switcher = null;
+if (switcher) {
+    console.log('Working...');
+}else{
+    console.log('Not working...');
+}
+
+switcher = 1;
+
+if (switcher) {
+    console.log('Working...');
+}
+
+//method 2
+
+console.log(typeof(Boolean('4')));
+
+//method 3
+console.log(typeof(!!"44444"));
+
+
+
+
+
+
 /*LESSON 23*/
 
 
